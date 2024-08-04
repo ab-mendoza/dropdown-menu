@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background-color: lavender;
+    box-shadow: 10px 10px 10px 0 whitesmoke;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    padding: 0.8rem 1rem;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: lightpink;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.dropdown-menu {
+    background-color: lavenderblush;
+    list-style: none;
+    position: absolute;
+    display: none;
+    animation: fadeIn 0.5s ease; 
+}
+
+.internal {
+    background-color: rgb(238, 249, 255);
+}
+
+.dropdown-item {
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+}
+
+.dropdown-menu .dropdown-menu {
+    margin-top: 0;
+    top: 0;
+    left: 100%;
+}
+
+.nav-item:hover > .dropdown-menu,
+.dropdown-item:hover > .dropdown-menu {
+    display: block;
+}
